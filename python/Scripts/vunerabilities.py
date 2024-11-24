@@ -2,6 +2,7 @@ import time
 import json
 import requests
 from zapv2 import ZAPv2
+from urllib.parse import urljoin, urlencode
 
 # Configure the ZAP API Key
 api_key = 'e914nhk6jpbq52bu29psqdkg2o'
@@ -50,8 +51,11 @@ while int(zap.ascan.status(scan_id)) < 100:
     time.sleep(5)
 print("Active scanning completed.")
 
-# Step 5: Load additional payloads from PayloadsAllTheThings
+# Step 5: Fetch payloads from PayloadsAllTheThings
 def fetch_payloads_from_github(raw_url):
+    """
+    Fetch raw payloads from a GitHub file.
+    """
     try:
         response = requests.get(raw_url)
         response.raise_for_status()
@@ -76,7 +80,7 @@ print(f"Total alerts retrieved: {len(alerts)}")
 # Step 7: Add manual payload validation
 validated_vulnerabilities = []
 for payload in payloads:
-    test_url = f"{target}{payload}"
+    test_url = urljoin(target, payload)
     try:
         response = requests.get(test_url, timeout=5)
         if response.status_code == 200 and any(keyword in response.text for keyword in ['root:', 'bin/bash', 'shadow:', '[global]']):

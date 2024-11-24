@@ -1,5 +1,6 @@
 import time
 import json
+import os
 import requests
 from zapv2 import ZAPv2
 from urllib.parse import urljoin
@@ -9,9 +10,12 @@ api_key = 'e914nhk6jpbq52bu29psqdkg2o'
 zap = ZAPv2(apikey=api_key)
 
 # User target URL
-target = input("Enter the target URL (default: http://localhost:8000): ").strip()
+target = os.environ.get('TARGET_URL')
+# target = ("https://juice-shop.herokuapp.com")
+
 if not target:
-    target = 'http://localhost:8000'
+    print("Error: No target URL provided.")
+    exit(1)
 
 context_name = "DynamicContext"
 print(f"Configuring ZAP for target: {target}")
@@ -105,7 +109,7 @@ for payload in payloads:
 all_vulnerabilities = alerts + successful_findings
 
 # Step 11: Write results to a JSON file
-output_file = 'results.json'
+output_file = '../../front/src/data/results.json'
 with open(output_file, 'w') as json_file:
     json.dump(all_vulnerabilities, json_file, indent=4)
 

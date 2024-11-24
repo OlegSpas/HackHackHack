@@ -3,14 +3,14 @@
     height: 100vh;
 }
 
-.HomePage__content{
+.HomePage__content {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
 
-.HomePage__main_content{
+.HomePage__main_content {
     height: 70%;
     width: 100%;
     display: flex;
@@ -18,7 +18,7 @@
     flex-direction: column;
 }
 
-.HomePage__logo{
+.HomePage__logo {
     font-family: 'Raleway ExtraBold';
     font-size: 132px;
     font-weight: 800;
@@ -27,9 +27,10 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     text-shadow: 3px 4px 15px #E2007440;
+    color: #fff;
 
 
-    .logo__puprle{
+    .logo__puprle {
         font-family: 'Raleway ExtraBold';
         font-size: 132px;
         font-weight: 800;
@@ -43,7 +44,7 @@
 }
 
 
-.HomePage__subTitle{
+.HomePage__subTitle {
     font-family: 'Raleway Light';
     font-size: 48px;
     font-weight: 300;
@@ -55,14 +56,14 @@
 }
 
 
-.HomePage__function{
+.HomePage__function {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.function__input{
+.function__input {
     background-color: #6C0037C2;
     border: 0px;
     border-radius: 14px;
@@ -79,7 +80,7 @@
     text-decoration-skip-ink: none;
     padding-left: 2%;
 
-    &:focus-visible{
+    &:focus-visible {
         outline: -webkit-focus-ring-color auto 0.2px
     }
 
@@ -87,7 +88,7 @@
 }
 
 
-.function__button{
+.function__button {
     cursor: pointer;
     font-family: 'Raleway Regular';
     font-size: 34px;
@@ -98,14 +99,14 @@
     text-decoration-skip-ink: none;
     color: #fff;
 
-    background-color:#E20074;
+    background-color: #E20074;
     border-radius: 14px;
     height: 70px;
     width: 215px;
     border: 0px;
 }
 
-.copyright__text{
+.copyright__text {
     font-family: 'Raleway Medium';
     font-size: 28px;
     font-weight: 500;
@@ -115,7 +116,7 @@
     text-decoration-skip-ink: none;
     color: #fff;
 
-    .team_name{
+    .team_name {
         font-family: 'Raleway Bold';
         font-size: 28px;
         font-weight: 700;

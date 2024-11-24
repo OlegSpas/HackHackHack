@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/StyleHomePage.scss';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
     // Declare state variables using useState
@@ -11,6 +12,10 @@ function HomePage() {
 
     // Start scanning when the user clicks the "Submit" button
     const startScan = async () => {
+        
+        if (url.trim() === '') return;
+
+        console.log('work')
         setLoading(true);  // Set loading to true when scan starts
         setError(null);    // Clear any previous errors
         setResults(null);  // Clear any previous results
@@ -38,6 +43,8 @@ function HomePage() {
     };
 
     return (
+
+
         <section className="HomePage">
             <div className="container">
                 <div className="HomePage__content">
@@ -49,18 +56,20 @@ function HomePage() {
                             <h2 className='HomePage__subTitle'>Check security of your website</h2>
                         </div>
                         <div className="HomePage__function">
-                            <input 
+                            <input
                                 value={url}
                                 onChange={(e) => setUrl(e.target.value)} // Update state when user types in input
-                                className='function__input' 
-                                type="text" 
-                                name="url_link" 
-                                id="url_link" 
-                                placeholder='Enter your URL' 
+                                className='function__input'
+                                type="text"
+                                name="url_link"
+                                id="url_link"
+                                placeholder='Enter your URL'
                             />
-                            <button onClick={startScan} className="function__button">
-                                {loading ? "Scanning..." : "SUBMIT"} {/* Show loading text when scanning */}
-                            </button>
+                            <Link className='to_load_btn' to="/loading">
+                                <button onClick={startScan} className="function__button">
+                                    {loading ? "Scanning..." : "SUBMIT"} {/* Show loading text when scanning */}
+                                </button>
+                            </Link>
                         </div>
                         <div className="copyright">
                             <h3 className='copyright__text'>

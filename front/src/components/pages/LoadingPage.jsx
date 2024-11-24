@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/StyleLoadingPage.scss';
+import { Link, useNavigate } from 'react-router-dom';
 
 function LoadingPage() {
 
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            navigate('/vulnerabilities');
+        }, 25000);
+
+        return () => clearTimeout(timer);
+    }, [navigate]);
+
+    //TODO if you click on Link it scanning will be continue
 
     return (
         <section className="LoadingPage">
@@ -10,10 +22,14 @@ function LoadingPage() {
                 <div className="LoadingPage__content">
                     <div className="LoadingPage__main_content">
                         <header className="LoadingPage__header">
-                            <button className="back__button">
-                                Back
-                            </button>
-                            <h1 className='LoadingPage__logo'><span className='logo__purple'>Web</span>Check</h1>
+                            <Link className='to_load_btn' to="/">
+                                <button className="back__button">
+                                    Back
+                                </button>
+                            </Link>
+                            <Link className='Logo__btn' to="/">
+                                <h1 className='LoadingPage__logo'><span className='logo__purple'>Web</span>Check</h1>
+                            </Link>
                         </header>
                         <div className="loading">
                             <h2 className="loading__description">

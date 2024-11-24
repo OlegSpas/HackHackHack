@@ -1,0 +1,129 @@
+.HomePage{
+    background-color: #15010C;
+    height: 100vh;
+}
+
+.HomePage__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.HomePage__main_content{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.HomePage__logo{
+    font-family: 'Raleway ExtraBold';
+    font-size: 132px;
+    font-weight: 800;
+    line-height: 120px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-shadow: 3px 4px 15px #E2007440;
+
+
+    .logo__puprle{
+        font-family: 'Raleway ExtraBold';
+        font-size: 132px;
+        font-weight: 800;
+        line-height: 120px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #A03174;
+
+    }
+}
+
+
+.HomePage__subTitle{
+    font-family: 'Raleway Light';
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 56.35px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #fff;
+}
+
+
+.HomePage__function{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.function__input{
+    background-color: #6C0037C2;
+    border: 0px;
+    border-radius: 14px;
+    width: 50%;
+    height: 70px;
+    outline-color: red;
+
+    font-family: 'Raleway Regular';
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35.22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding-left: 2%;
+
+    &:focus-visible{
+        outline: -webkit-focus-ring-color auto 0.2px
+    }
+
+    margin-bottom: 1.5%;
+}
+
+
+.function__button{
+    cursor: pointer;
+    font-family: 'Raleway Regular';
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 39.92px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #fff;
+
+    background-color:#E20074;
+    border-radius: 14px;
+    height: 70px;
+    width: 215px;
+    border: 0px;
+}
+
+.copyright__text{
+    font-family: 'Raleway Medium';
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 32.87px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #fff;
+
+    .team_name{
+        font-family: 'Raleway Bold';
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 32.87px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #E20074;
+
+    }
+}

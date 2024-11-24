@@ -1,13 +1,75 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  resize: none;
+  font-family: 'Raleway Light';
+}
+
+
+@font-face {
+  font-family: 'Raleway ExtraBold';
+  src: url('./components/fonts/Raleway-ExtraBold.woff2') format('woff2'),
+      url('./components/fonts/Raleway-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway Light';
+  src: url('./components/fonts/Raleway-Light.woff2') format('woff2'),
+      url('./components/fonts/Raleway-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway Regular';
+  src: url('./components/fonts/Raleway-Regular.woff2') format('woff2'),
+      url('./components/fonts/Raleway-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway Medium';
+  src: url(' ./components/fonts/Raleway-Medium.woff2') format('woff2'),
+      url('./components/fonts/Raleway-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway Bold';
+  src: url('./components/fonts/Raleway-Bold.woff2') format('woff2'),
+      url('./components/fonts/Raleway-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway SemiBold';
+  src: url('./components/fonts/Raleway-SemiBold.woff2') format('woff2'),
+      url('./components/fonts/Raleway-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  height: inherit;
 }
